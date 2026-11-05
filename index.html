@@ -93,7 +93,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h2><h3 id="概念区分"><a href="#概念区分" class="headerlink" title="概念区分"></a>概念区分</h3><p>普通搜索引擎（百度、谷歌）：抓取网页内容；<br>网络测绘搜索引擎（ZoomEye&#x2F;FOFA）：探测IP、端口、服务指纹，收录联网硬件与Web资产。</p>
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; **⚠️ 学习合规说明**</span><br><span class="line">&gt; 本文为学生网络安全课程学习笔记，仅用于学习测绘工具的原理与操作流程，**禁止利用相关技术对未授权的第三方域名、网络资产开展探测、扫描和访问**，自觉遵守网络安全相关法律法规。</span><br></pre></td></tr></table></figure>
+<h2 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h2><h3 id="概念区分"><a href="#概念区分" class="headerlink" title="概念区分"></a>概念区分</h3><p>普通搜索引擎（百度、谷歌）：抓取网页内容；<br>网络测绘搜索引擎（ZoomEye&#x2F;FOFA）：探测IP、端口、服务指纹，收录联网硬件与Web资产。</p>
 <h3 id="国内测绘引擎"><a href="#国内测绘引擎" class="headerlink" title="国内测绘引擎"></a>国内测绘引擎</h3><ol>
 <li><strong>ZoomEye（钟馗之眼｜知道创宇）</strong><ul>
 <li>双引擎：Xmap主机探测 + Wmap Web指纹识别</li>
@@ -137,9 +138,9 @@
 </ul>
 </li>
 </ul>
-<p>可以看出同一机构根域名<code>guet.edu.cn</code>下，存在多个不同前缀的子域名，分别承载不同业务系统。<br>查询：桂林电子科技大学<br>org&#x3D;”桂林电子科技大学”<br>![截图](2026-11-05 094638.png)</p>
+<p>可以看出同一机构根域名<code>guet.edu.cn</code>下，存在多个不同前缀的子域名，分别承载不同业务系统。<br>查询：桂林电子科技大学<br>org&#x3D;”桂林电子科技大学”<br><img src="/images/1.png" alt="截图"></p>
 <p>查询：桂林电子科技大学的端口4430的资产<br>org&#x3D;”桂林电子科技大学” &amp;&amp; port&#x3D;”4430”</p>
-<p>![截图](2026-11-05 095139.png)</p>
+<p><img src="/images/2.png" alt="截图"></p>
 <h2 id="子域名查询"><a href="#子域名查询" class="headerlink" title="子域名查询"></a>子域名查询</h2><p>根域名：qq.com<br>子域名：<br>——<code>download.sj.qq.com</code>（三级）<br>——<code>ycg.qq.com</code>（二级）<br>——<code>labi.qq.com</code>（二级）<br>——<code>music.qq.com</code>（QQ音乐，二级）<br>——<code>v.qq.com</code>（腾讯视频，二级）<br>——<code>mail.qq.com</code>（QQ邮箱，二级）<br> …….</p>
 <h3 id="域名层级关系"><a href="#域名层级关系" class="headerlink" title="域名层级关系"></a>域名层级关系</h3><p> 根域名：<code>qq.com</code><br> 二级子域名：<code>music.qq.com</code><br> 结构说明：<code>music</code> 为子域名前缀，拼接根域名形成完整二级子域名 <code>music.qq.com</code><br> 业务含义：QQ音乐官方站点</p>
 <h3 id="拓展多级子域名对比"><a href="#拓展多级子域名对比" class="headerlink" title="拓展多级子域名对比"></a>拓展多级子域名对比</h3><ol>
@@ -150,13 +151,13 @@
 <li>根域名<code>qq.com</code>前面增加合法前缀即可生成子域名，支持多层嵌套（二级、三级甚至更深）</li>
 <li>ZoomEye <code>site:根域名</code>语法是被动批量收集子域名的核心语法</li>
 <li>提取子域名时，需要剥离端口后缀，只保留完整域名</li>
-<li>大型企业根域名下存在大量承载不同业务的多级子域名，子域名收集是网络攻击面测绘的基础环节<br><img src="/images/1.png"></li>
+<li>大型企业根域名下存在大量承载不同业务的多级子域名，子域名收集是网络攻击面测绘的基础环节<br><img src="/images/4.png"><br><img src="/images/3.png"></li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/11/05/zoomeye%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%AD%A6%E4%B9%A0/" data-id="cuid1-ZTFhUqshhLGZpTE3reU" data-title="zoom eye信息搜集学习" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/11/05/zoomeye%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%AD%A6%E4%B9%A0/" data-id="cuid5fJd5OIag2e9dlWdXBX68" data-title="zoom eye信息搜集学习" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -280,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/09/26/%E5%85%B3%E4%BA%8E%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A42.0%E7%9A%84%E7%9C%8B%E6%B3%95/" data-id="cuidqyV1j0cHV7Q1poSxh8NqF" data-title="信息安全等级保护2.0" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/09/26/%E5%85%B3%E4%BA%8E%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A42.0%E7%9A%84%E7%9C%8B%E6%B3%95/" data-id="cuidE5WBELFg0I__oi3WR32mB" data-title="信息安全等级保护2.0" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
