@@ -71,6 +71,65 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-curl实践" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/11/07/curl%E5%AE%9E%E8%B7%B5/" class="article-date">
+  <time class="dt-published" datetime="2026-11-07T11:16:08.128Z" itemprop="datePublished">2026-11-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/11/07/curl%E5%AE%9E%E8%B7%B5/">curl实践</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><ol>
+<li>掌握 curl 基础用法，理解 GET、HEAD、POST、重定向等 HTTP 请求，看懂请求与响应报文。</li>
+</ol>
+<h2 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h2><ul>
+<li>虚拟机：Debian 12.x 64位</li>
+<li>网卡模式：NAT（支持外网访问）</li>
+<li>工具：curl、python3</li>
+<li>测试目标：外网目标：<code>https://httpbin.org</code>（公共HTTP调试站点）</li>
+</ul>
+<h2 id="前置检查"><a href="#前置检查" class="headerlink" title="前置检查"></a>前置检查</h2><p>检查 curl 是否存在：<br><code>ash curl --version</code><br><img src="/images/2-1.png"></p>
+<h2 id="外网测试"><a href="#外网测试" class="headerlink" title="外网测试"></a>外网测试</h2><blockquote>
+<p>使用公共测试服务，<code>[httpbin.org](https://httpbin.org) </code>进行 POST、重定向等进阶调试。 重要说明：<code>curl https://httpbin.org/get</code> 是单次定向 HTTP 访问，等同于浏览器打开网页</p>
+</blockquote>
+<ol>
+<li>GET请求，仅输出响应正文<br><code>curl https://httpbin.org/get</code><br><img src="/images/2-2.png"></li>
+<li>-i 小写i：同时输出响应头、响应体<br><code>curl -i https://httpbin.org/get</code><br><img src="/images/2-3.png"></li>
+<li>-I 大写I：HEAD请求，只获取响应头<br><code>curl -I https://httpbin.org/get</code><br><img src="/images/2-3.png"></li>
+<li>POST 表单提交<br><code>curl -X POST -d &quot;username=test&amp;password=123456&quot; https://httpbin.org/post</code><br><img src="/images/2-4.png"></li>
+<li>POST JSON数据<br><code>curl -X POST -H &quot;Content-Type: application/json&quot; -d &#39;{&quot;name&quot;:&quot;debian&quot;,&quot;id&quot;:1001}&#39; https://httpbin.org/post</code><br><img src="/images/2-5.png"></li>
+<li>-L 小写L：自动跟随301&#x2F;302重定向<br><code>curl -L https://httpbin.org/redirect/1</code><br><img src="/images/2-5.png"></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/11/07/curl%E5%AE%9E%E8%B7%B5/" data-id="cuidhnvzHiHlNGdK82l6yYLmE" data-title="curl实践" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-zoomeye信息搜集学习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2026/11/05/zoomeye%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%AD%A6%E4%B9%A0/" class="article-date">
@@ -157,7 +216,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/11/05/zoomeye%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%AD%A6%E4%B9%A0/" data-id="cuid5fJd5OIag2e9dlWdXBX68" data-title="zoom eye信息搜集学习" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/11/05/zoomeye%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%AD%A6%E4%B9%A0/" data-id="cuidGHRGB8QtKk4W8K3A9jz-j" data-title="zoom eye信息搜集学习" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -281,7 +340,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/09/26/%E5%85%B3%E4%BA%8E%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A42.0%E7%9A%84%E7%9C%8B%E6%B3%95/" data-id="cuidE5WBELFg0I__oi3WR32mB" data-title="信息安全等级保护2.0" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/09/26/%E5%85%B3%E4%BA%8E%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A42.0%E7%9A%84%E7%9C%8B%E6%B3%95/" data-id="cuidAlY2WGjtIfxqex6t19mIP" data-title="信息安全等级保护2.0" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -338,6 +397,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2026/11/07/curl%E5%AE%9E%E8%B7%B5/">curl实践</a>
+          </li>
         
           <li>
             <a href="/2026/11/05/zoomeye%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%AD%A6%E4%B9%A0/">zoom eye信息搜集学习</a>
